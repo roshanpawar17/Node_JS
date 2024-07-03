@@ -1,0 +1,15 @@
+{
+  "name": "nodejstutorial",
+  "version": "1.0.0",
+  "description": "Node Js Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
+  },
+  "author": "Roshan Pawar",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
