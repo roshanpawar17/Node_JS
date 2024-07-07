@@ -3,6 +3,8 @@ const path = require('path');
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
 // app.get('', (req, res)=>{
 //     res.send(`
 //         <h1>Hello World</h1>
@@ -28,19 +30,28 @@ const app = express();
 
 // })
 
-const publicPath = path.join(__dirname, "public");
+// const publicPath = path.join(__dirname, "public");
 // app.use(express.static(publicPath));
 
+// app.get('', (req, res)=>{
+//     res.sendFile(`${publicPath}/index.html`)
+// });
+
+// app.get('/about', (req, res)=>{
+//     res.sendFile(`${publicPath}/about.html`)
+// });
+
+// app.get('*', (req, res)=>{
+//     res.sendFile(`${publicPath}/not-found.html`)
+// });
+
+
+
+
 app.get('', (req, res)=>{
-    res.sendFile(`${publicPath}/index.html`)
+    const user = { name: "Roshan", skills: ['Html', 'css', 'js'] }
+    res.render('index', {user});
 });
-
-app.get('/about', (req, res)=>{
-    res.sendFile(`${publicPath}/about.html`)
-});
-
-app.get('*', (req, res)=>{
-    res.sendFile(`${publicPath}/not-found.html`)
-});
+ 
 
 app.listen(80); 
