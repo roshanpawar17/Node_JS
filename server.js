@@ -12,7 +12,7 @@ const server = http.createServer((req, res)=>{
     // res.setHeader('Content-Type', 'text/html')
     // res.write("Hello Roshan Pawar")
     // res.write(home) 
-    res.write(JSON.stringify({name: "Roshan", company: "SSI", employeeNo: 251}))
+    // res.write(JSON.stringify({name: "Roshan", company: "SSI", employeeNo: 251}))
     res.end()
 }); 
   
