@@ -5,33 +5,33 @@ const app = express();
 
 // app.set('view engine', 'ejs');
 
-app.get('', (req, res)=>{
-    res.send(`
-        <h1>Hello World</h1>
-        <a href="about">About</a>
-    `);
-    res.send([
-        {
-            name: 'John',
-            age: 30
-        },
-        {
-            name: 'Roshan',
-            age: 21
-        },
-    ]);
-})
+// app.get('', (req, res)=>{
+//     res.send(`
+//         <h1>Hello World</h1>
+//         <a href="about">About</a>
+//     `);
+//     res.send([
+//         {
+//             name: 'John',
+//             age: 30
+//         },
+//         {
+//             name: 'Roshan',
+//             age: 21
+//         },
+//     ]);
+// })
 
-app.get('/about', (req, res)=>{
-    res.send(`
-        <h1>About Page</h1>
-        <a href="/">Home</a>
-    `);
+// app.get('/about', (req, res)=>{
+//     res.send(`
+//         <h1>About Page</h1>
+//         <a href="/">Home</a>
+//     `);
 
-})
+// })
 
-// const publicPath = path.join(__dirname, "public");
-// app.use(express.static(publicPath));
+const publicPath = path.join(__dirname, "public");
+app.use(express.static(publicPath));
 
 // app.get('', (req, res)=>{
 //     res.sendFile(`${publicPath}/index.html`)
